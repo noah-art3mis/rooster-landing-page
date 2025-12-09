@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach((link) => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -15,33 +15,36 @@ document.querySelectorAll('.nav-menu a').forEach((link) => {
     });
 });
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
+            const offset = 80; // Account for fixed navbar
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                offset;
+            window.scrollTo({
+                top: targetPosition,
                 behavior: 'smooth',
-                block: 'start',
             });
         }
     });
 });
 
-// Navbar background change on scroll
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
 
-// Intersection Observer for animations
+// Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px',
@@ -50,8 +53,8 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
@@ -59,73 +62,28 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
-        '.feature-card, .step, .download-content'
+        '.problem-card, .feature-item, .advantage-card, .contact-content'
     );
 
-    animatedElements.forEach((el) => {
+    animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transition = `opacity 0.6s ease ${
+            index * 0.1
+        }s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(el);
     });
 });
 
-// Add hover effects to feature cards
-document.querySelectorAll('.feature-card').forEach((card) => {
-    card.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-15px) scale(1.02)';
-    });
-
-    card.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// Counter animation for statistics (if you want to add them later)
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-
-    const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            element.textContent = target.toLocaleString();
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(start).toLocaleString();
-        }
-    }, 16);
-}
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
-// Add active state to navigation based on scroll position
+// Add active state to navigation
 function updateActiveNav() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLinks = document.querySelectorAll('.nav-menu a:not(.nav-cta)');
 
     let current = '';
     sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
+        const sectionTop = section.offsetTop - 100;
+        if (window.pageYOffset >= sectionTop) {
             current = section.getAttribute('id');
         }
     });
@@ -140,27 +98,23 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav);
 
-// Add CSS for active navigation state
+// Add active nav styles
 const style = document.createElement('style');
 style.textContent = `
     .nav-menu a.active {
-        color: #2E7D32 !important;
-        font-weight: 600;
+        color: var(--color-primary) !important;
     }
     
-    .nav-menu a.active::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #2E7D32;
-        border-radius: 1px;
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
     
-    .nav-menu a {
-        position: relative;
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
 `;
 document.head.appendChild(style);

@@ -3,30 +3,36 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rooster - Smart Recycling Made Simple</title>
+        <title>Rooster - Municipal Waste Management Platform</title>
+        <meta
+            name="description"
+            content="Rooster helps municipalities manage collection schedules, send notifications to residents, and track waste management analytics."
+        />
         <link rel="stylesheet" href="styles.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"
             rel="stylesheet"
         />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
+        <link rel="icon" type="image/png" href="icon.png" />
     </head>
     <body>
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <i class="fas fa-recycle"></i>
+                    <img src="icon.png" alt="Rooster" class="logo-icon" />
                     <span>Rooster</span>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#problems">Why Rooster</a></li>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#download">Download</a></li>
+                    <li><a href="#residents">For Residents</a></li>
+                    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -38,40 +44,110 @@
 
         <!-- Hero Section -->
         <section id="home" class="hero">
+            <div class="hero-bg-pattern"></div>
             <div class="hero-container">
                 <div class="hero-content">
+                    <p class="hero-eyebrow">For Municipal Governments</p>
                     <h1>
-                        Recycle Smarter with
-                        <span class="highlight">Rooster</span>
+                        Smarter Waste Collection
+                        <span class="highlight">Starts Here</span>
                     </h1>
-                    <p>
-                        Transform your recycling habits with AI-powered sorting,
-                        real-time guidance, and rewards for making the planet
-                        greener.
+                    <p class="hero-description">
+                        Rooster helps municipalities manage collection
+                        schedules, send real-time notifications to residents,
+                        and bridge the communication gap between government and
+                        community.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#download" class="btn btn-primary">
-                            <i class="fab fa-apple"></i>
-                            Download for iOS
-                        </a>
-                        <a href="#download" class="btn btn-secondary">
-                            <i class="fab fa-google-play"></i>
-                            Download for Android
+                        <a href="#contact" class="btn btn-primary">
+                            Request a Demo
+                            <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="phone-mockup">
-                        <div class="screen">
-                            <div class="app-interface">
-                                <div class="camera-view">
-                                    <div class="scan-animation"></div>
+                <div class="hero-visual">
+                    <div class="app-preview">
+                        <div class="preview-header">
+                            <span class="preview-dot"></span>
+                            <span class="preview-dot"></span>
+                            <span class="preview-dot"></span>
+                        </div>
+                        <div class="preview-content">
+                            <div class="preview-card">
+                                <div class="preview-icon calendar-icon">📅</div>
+                                <div class="preview-text">
+                                    <span class="preview-label"
+                                        >Next Collection</span
+                                    >
+                                    <span class="preview-value"
+                                        >Tomorrow, 7:00 AM</span
+                                    >
                                 </div>
-                                <div class="scan-button">
-                                    <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="preview-card">
+                                <div class="preview-icon bin-icon">♻️</div>
+                                <div class="preview-text">
+                                    <span class="preview-label">This Week</span>
+                                    <span class="preview-value"
+                                        >Recycling & Organics</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="preview-card alert-card">
+                                <div class="preview-icon alert-icon">🔔</div>
+                                <div class="preview-text">
+                                    <span class="preview-label">Alert</span>
+                                    <span class="preview-value"
+                                        >Route change: Oak Street</span
+                                    >
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems Section -->
+        <section id="problems" class="problems">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">The Challenge</p>
+                    <h2>Problems We Solve</h2>
+                </div>
+                <div class="problems-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Communication Gap</h3>
+                        <p>
+                            Poor communication between municipal governments and
+                            residents leads to confusion, missed collections,
+                            and frustrated citizens.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                        <h3>Sorting Confusion</h3>
+                        <p>
+                            Residents often discard waste in the wrong bins due
+                            to unclear guidelines, increasing contamination and
+                            processing costs.
+                        </p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-calendar-times"></i>
+                        </div>
+                        <h3>Schedule Changes</h3>
+                        <p>
+                            Holiday schedules, route changes, and special
+                            collections cause confusion when updates don't reach
+                            residents in time.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -80,118 +156,254 @@
         <!-- Features Section -->
         <section id="features" class="features">
             <div class="container">
-                <h2>Why Choose Rooster?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-camera"></i>
+                <div class="section-header">
+                    <p class="section-eyebrow">The Solution</p>
+                    <h2>What Rooster Offers</h2>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-content">
+                            <div class="feature-badge">📅</div>
+                            <h3>Calendar</h3>
+                            <p>
+                                Year-round collection schedules accessible to
+                                all residents. Real-time alerts for schedule
+                                changes, holidays, and special collection events
+                                — no more missed pickups.
+                            </p>
+                            <ul class="feature-points">
+                                <li>
+                                    Customizable by zone and collection type
+                                </li>
+                                <li>Push notifications for schedule changes</li>
+                                <li>Holiday and weather delay alerts</li>
+                            </ul>
                         </div>
-                        <h3>Smart Scanning</h3>
+                        <div class="feature-visual">
+                            <div class="feature-mockup calendar-mockup">
+                                <div class="mockup-header">December 2025</div>
+                                <div class="mockup-calendar">
+                                    <div class="cal-row cal-header">
+                                        <span>S</span><span>M</span
+                                        ><span>T</span><span>W</span
+                                        ><span>T</span><span>F</span
+                                        ><span>S</span>
+                                    </div>
+                                    <div class="cal-row">
+                                        <span></span><span>1</span
+                                        ><span class="cal-recycling">2</span
+                                        ><span>3</span><span>4</span
+                                        ><span class="cal-organics">5</span
+                                        ><span>6</span>
+                                    </div>
+                                    <div class="cal-row">
+                                        <span>7</span><span>8</span
+                                        ><span class="cal-recycling">9</span
+                                        ><span>10</span><span>11</span
+                                        ><span class="cal-garbage">12</span
+                                        ><span>13</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-item reverse">
+                        <div class="feature-content">
+                            <div class="feature-badge">🔍</div>
+                            <h3>Explorer</h3>
+                            <p>
+                                An interactive guide that helps residents sort
+                                waste correctly. Search any item to find out
+                                which bin it belongs in — reducing contamination
+                                and improving recycling rates.
+                            </p>
+                            <ul class="feature-points">
+                                <li>Searchable database of common items</li>
+                                <li>Clear bin assignments with explanations</li>
+                                <li>Customizable for local recycling rules</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <div class="feature-mockup explorer-mockup">
+                                <div class="explorer-search">
+                                    <i class="fas fa-search"></i>
+                                    <span>pizza box</span>
+                                </div>
+                                <div class="explorer-result">
+                                    <div class="result-icon">📦</div>
+                                    <div class="result-info">
+                                        <span class="result-item"
+                                            >Pizza Box</span
+                                        >
+                                        <span class="result-bin organics"
+                                            >Organics Bin</span
+                                        >
+                                    </div>
+                                </div>
+                                <p class="result-note">
+                                    Remove any leftover food first
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-content">
+                            <div class="feature-badge">⚙️</div>
+                            <h3>Dashboard</h3>
+                            <p>
+                                A powerful admin interface for municipal staff
+                                to manage zones, schedules, events, and
+                                communications. Send announcements directly to
+                                residents about local services or educational
+                                content.
+                            </p>
+                            <ul class="feature-points">
+                                <li>Zone and route management</li>
+                                <li>Schedule editor with bulk updates</li>
+                                <li>Direct messaging to residents</li>
+                                <li>Analytics and usage tracking</li>
+                            </ul>
+                        </div>
+                        <div class="feature-visual">
+                            <div class="feature-mockup dashboard-mockup">
+                                <div class="dash-header">
+                                    <span class="dash-title"
+                                        >Admin Dashboard</span
+                                    >
+                                    <span class="dash-badge">3 alerts</span>
+                                </div>
+                                <div class="dash-stats">
+                                    <div class="dash-stat">
+                                        <span class="stat-value">12,450</span>
+                                        <span class="stat-label"
+                                            >Active Users</span
+                                        >
+                                    </div>
+                                    <div class="dash-stat">
+                                        <span class="stat-value">8</span>
+                                        <span class="stat-label">Zones</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Rooster Section -->
+        <section id="why" class="why-rooster">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">The Advantage</p>
+                    <h2>Why Choose Rooster?</h2>
+                </div>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">💨</div>
+                        <h4>Lighter & Nimbler</h4>
                         <p>
-                            Just point your camera at any item and get instant
-                            recycling guidance with our AI-powered recognition.
+                            Modern architecture that's faster to deploy than
+                            legacy municipal systems.
                         </p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Local Recycling</h3>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">💰</div>
+                        <h4>Cost Effective</h4>
                         <p>
-                            Find nearby recycling centers, drop-off locations,
-                            and pickup schedules tailored to your area.
+                            A fraction of the cost of traditional solutions,
+                            with no hidden fees.
                         </p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3>Earn Rewards</h3>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">⚡</div>
+                        <h4>Real-Time Updates</h4>
                         <p>
-                            Get points for every item you recycle and redeem
-                            them for eco-friendly products and local discounts.
+                            Instant route change alerts and schedule updates
+                            that reach residents immediately.
                         </p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Track Progress</h3>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">♿</div>
+                        <h4>Accessibility First</h4>
                         <p>
-                            Monitor your environmental impact with detailed
-                            statistics and personalized recycling goals.
+                            Built with WCAG compliance in mind — ensuring all
+                            residents can access services.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="how-it-works">
+        <!-- For Residents Section -->
+        <section id="residents" class="residents">
             <div class="container">
-                <h2>How Rooster Works</h2>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Scan & Identify</h3>
-                            <p>
-                                Take a photo of any item and our AI instantly
-                                identifies what it is and how to recycle it.
+                <div class="residents-content">
+                    <div class="residents-text">
+                        <p class="section-eyebrow">For Citizens</p>
+                        <h2>Already Using Rooster?</h2>
+                        <p>
+                            If your municipality has partnered with Rooster, you
+                            can access collection schedules, sorting guides, and
+                            notifications through our mobile app or web widget.
+                        </p>
+                        <div class="residents-access">
+                            <p class="access-instruction">
+                                <i class="fas fa-check-circle"></i>
+                                Access Rooster through your city's website or
+                                contact your local waste management office for
+                                the direct link to your area's service.
                             </p>
                         </div>
+                        <p class="residents-note">
+                            <i class="fas fa-info-circle"></i>
+                            Don't see your city? Ask your local waste management
+                            office about Rooster.
+                        </p>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Get Guidance</h3>
-                            <p>
-                                Receive step-by-step instructions on how to
-                                properly prepare and recycle the item.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Recycle & Earn</h3>
-                            <p>
-                                Follow the instructions, recycle your item, and
-                                earn points for your eco-friendly actions.
-                            </p>
+                    <div class="residents-visual">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="phone-app">
+                                    <div class="app-nav">
+                                        <span class="app-nav-item active"
+                                            >Home</span
+                                        >
+                                        <span class="app-nav-item"
+                                            >Calendar</span
+                                        >
+                                        <span class="app-nav-item"
+                                            >Explorer</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Download Section -->
-        <section id="download" class="download">
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
             <div class="container">
-                <div class="download-content">
-                    <h2>Ready to Start Recycling Smarter?</h2>
-                    <p>
-                        Join thousands of users already making a difference with
-                        Rooster.
-                    </p>
-                    <div class="download-buttons">
-                        <a href="#" class="download-btn">
-                            <i class="fab fa-apple"></i>
-                            <div class="download-text">
-                                <span class="download-label"
-                                    >Download on the</span
-                                >
-                                <span class="download-platform">App Store</span>
-                            </div>
-                        </a>
-                        <a href="#" class="download-btn">
-                            <i class="fab fa-google-play"></i>
-                            <div class="download-text">
-                                <span class="download-label">Get it on</span>
-                                <span class="download-platform"
-                                    >Google Play</span
-                                >
-                            </div>
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <p class="section-eyebrow">Get Started</p>
+                        <h2>Ready to Transform Your Waste Management?</h2>
+                        <p>
+                            Let's discuss how Rooster can help your municipality
+                            improve resident communication and streamline
+                            collection operations.
+                        </p>
+                    </div>
+                    <div class="contact-actions">
+                        <a
+                            href="mailto:hello@urbansolvers.com"
+                            class="btn btn-primary btn-large"
+                        >
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
                         </a>
                     </div>
                 </div>
@@ -202,37 +414,44 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-section">
+                    <div class="footer-main">
                         <div class="footer-logo">
-                            <i class="fas fa-recycle"></i>
+                            <img
+                                src="icon.png"
+                                alt="Rooster"
+                                class="logo-icon"
+                            />
                             <span>Rooster</span>
                         </div>
                         <p>
-                            Making recycling simple, smart, and rewarding for
-                            everyone.
+                            A product by <a href="#">Urban Solvers</a> —
+                            building services for municipal governments.
                         </p>
                     </div>
-                    <div class="footer-section">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#download">Download</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Connect</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4>Product</h4>
+                            <ul>
+                                <li><a href="#features">Features</a></li>
+                                <li>
+                                    <a
+                                        href="https://rooster.urbansolvers.com/"
+                                        target="_blank"
+                                        >Product Page</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2024 Rooster. All rights reserved.</p>
+                    <p>&copy; 2025 Urban Solvers. All rights reserved.</p>
                 </div>
             </div>
         </footer>
