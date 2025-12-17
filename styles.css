@@ -187,14 +187,12 @@ h4 {
 }
 
 .logo-icon {
-    width: 2.25rem;
-    height: 2.25rem;
-    object-fit: cover;
+    width: 8rem;
+    height: auto;
+    object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
     flex-shrink: 0;
-    border-radius: 50%;
-    overflow: hidden;
 }
 
 .nav-logo:hover .logo-icon {
@@ -403,8 +401,14 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-bg);
+    background: transparent;
     border-radius: var(--radius-sm);
+}
+
+.preview-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .preview-text {
@@ -473,6 +477,13 @@ h4 {
     font-size: 1.5rem;
 }
 
+.problem-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 .problem-card h3 {
     margin-bottom: 0.75rem;
     color: var(--color-primary);
@@ -513,6 +524,15 @@ h4 {
 .feature-badge {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.feature-badge img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .feature-content h3 {
@@ -635,8 +655,11 @@ h4 {
     color: var(--color-text-muted);
 }
 
-.explorer-search i {
-    color: var(--color-text-muted);
+.explorer-search img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.7;
 }
 
 .explorer-result {
@@ -754,6 +777,15 @@ h4 {
 .advantage-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .advantage-card h4 {
@@ -940,14 +972,12 @@ h4 {
 }
 
 .footer-logo .logo-icon {
-    width: 2.25rem;
-    height: 2.25rem;
-    object-fit: cover;
+    width: 7rem;
+    height: auto;
+    object-fit: contain;
     display: block;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
     flex-shrink: 0;
-    border-radius: 50%;
-    overflow: hidden;
 }
 
 .footer-main p {
@@ -1108,6 +1138,14 @@ h4 {
     .btn-large {
         width: 100%;
         justify-content: center;
+    }
+
+    .feature-badge {
+        justify-content: center;
+    }
+
+    .feature-item {
+        grid-template-columns: 1fr;
     }
 }
 
